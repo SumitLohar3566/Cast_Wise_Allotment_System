@@ -135,3 +135,10 @@ BI dashboard creation
 Interview portfolio
 
 GitHub resume booster
+
+ 📞 Contact Developer: Sumit Lohar
+ 📧 Email:sumitlohar063@gmail.com 
+ 🐙 GitHub: https://github.com/YOUR-USERNAME 
+ 🔗 LinkedIn:https://www.linkedin.com/in/sumit-lohar-498341317/
+
+
