@@ -1,26 +1,26 @@
-📘 Cast-Wise Allotment System (SQL Project)
+### Cast-Wise Allotment System (SQL Project)
 
 A complete SQL-based data analysis project designed to study student admissions, caste-category-wise seat allotment, college distribution, and special reservation insights.
 This project demonstrates real-world SQL usage — Joins, Grouping, Aggregation, Subqueries, Filtering, and Analytical Reporting.
 
-- Project Preview
+- Project Preview:
 - <img width="1536" height="1024" alt="a" src="https://github.com/user-attachments/assets/17187b61-fd8d-421e-b1d0-73b40cb2aaac" />
 
-- Project Highlights
+- Project Highlights:
 
-📂 Fully Structured Database
+- Fully Structured Database
 
-🧮 Real-world SQL Analytical Queries
+- Real-world SQL Analytical Queries
 
-🔍 Caste Category–wise Insights
+- Caste Category–wise Insights
 
-🏛️ College Allotment Analysis
+- College Allotment Analysis
 
-🎯 Performance & Reservation Category Insights
+- Performance & Reservation Category Insights
 
-📊 Useful for dashboards & BI tools
+- Useful for dashboards & BI tools
 
-🏗️ Database Structure
+### Database Structure
 1. Students Table
 Column	Description
 StudentID	Unique student identifier
@@ -58,19 +58,19 @@ Ranking and sorting
 Inner join, multi-table join, group-by aggregates
 
 - SQL Queries (20+ Important Queries)
-✔️ Q1: Total students admitted
+ Q1: Total students admitted
 SELECT COUNT(*) AS Total_Admitted
 FROM Admissions
 WHERE Status = 'Yes';
 
-✔️ Q2: Students with college & their admission status
+ Q2: Students with college & their admission status
 SELECT s.Name, s.CasteCategory, s.Marks,
        c.CollegeName, a.Status
 FROM Students s
 JOIN Admissions a ON s.StudentID = a.StudentID
 JOIN Colleges c ON a.CollegeID = c.CollegeID;
 
-✔️ Q3: Students admitted with marks < 75
+ Q3: Students admitted with marks < 75
 
 Useful for special reservation category.
 
@@ -78,26 +78,26 @@ SELECT Name, CasteCategory, Marks
 FROM Students
 WHERE Marks < 75;
 
-✔️ Q4: Category-wise total students
+ Q4: Category-wise total students
 SELECT CasteCategory, COUNT(*) AS Total_Students
 FROM Students
 GROUP BY CasteCategory;
 
-✔️ Q5: Category-wise admitted students
+ Q5: Category-wise admitted students
 SELECT s.CasteCategory, COUNT(*) AS Total_Admitted
 FROM Students s
 JOIN Admissions a ON s.StudentID = a.StudentID
 WHERE a.Status = 'Yes'
 GROUP BY s.CasteCategory;
 
-✔️ Q6: College-wise admissions
+ Q6: College-wise admissions
 SELECT c.CollegeName, COUNT(*) AS Admitted_Count
 FROM Colleges c
 JOIN Admissions a ON c.CollegeID = a.CollegeID
 WHERE a.Status = 'Yes'
 GROUP BY c.CollegeName;
 
-✔️ Q7: Highest marks student per category
+ Q7: Highest marks student per category
 SELECT CasteCategory, Name, Marks
 FROM (
     SELECT *, 
@@ -106,36 +106,37 @@ FROM (
 ) t
 WHERE rn = 1;
 
-✔️ Q8: Students NOT admitted
+ Q8: Students NOT admitted
 SELECT s.Name, s.CasteCategory
 FROM Students s
 LEFT JOIN Admissions a ON s.StudentID = a.StudentID
 WHERE a.Status = 'No' OR a.Status IS NULL;
 
-✔️ Q9: Average marks per category
+ Q9: Average marks per category
 SELECT CasteCategory, AVG(Marks) AS AvgMarks
 FROM Students
 GROUP BY CasteCategory;
 
-✔️ Q10: Colleges with zero admissions
+ Q10: Colleges with zero admissions
 SELECT CollegeName
 FROM Colleges
 WHERE CollegeID NOT IN (SELECT CollegeID FROM Admissions WHERE Status = 'Yes');
 
-- Final Notes
+- Final Notes:
 
-This SQL project is perfect for:
+# This SQL project is perfect for:
 
-College admission analytics
+- College admission analytics
 
-Government reservation & caste-wise allotment study
+- Government reservation & caste-wise allotment study
 
-BI dashboard creation
+- BI dashboard creation
 
-Interview portfolio
+- Interview portfolio
 
-GitHub resume booster
-
-📞 Contact Developer: Sumit Lohar 📧 Email:sumitlohar063@gmail.com 🐙 GitHub: https://github.com/SumitLohar3566🔗 LinkedIn:(https://www.linkedin.com/in/sumit-lohar-498341317/)
+- Contact Developer: Sumit Lohar
+- Email:sumitlohar063@gmail.com
+- GitHub: https://github.com/SumitLohar3566
+- LinkedIn:(https://www.linkedin.com/in/sumit-lohar-498341317/)
 
 
